@@ -11,7 +11,7 @@ function App() {
           Hello world
         </h1>
       
-      axios.get(url).then(displayTemp)
+      axios.get(url).then(displayTemp);
       </header>
     </div>
   );

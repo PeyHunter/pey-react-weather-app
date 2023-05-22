@@ -1,0 +1,55 @@
+
+.h1 {
+    font-size: 30px;
+    color: rgb(34, 34, 142);
+}
+
+
+.currentWeather {
+    font-size: 85px;
+    font-weight: bold;
+    color: rgb(34, 34, 142);
+    line-height: 100px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    ;
+}
+
+
+.emojies1 {
+    padding: 0px 80px 0px;
+}
+
+.littleTitle {
+    font-size: 13px;
+    font-weight: bolder;
+    line-height: 1.5;
+    color: rgb(34, 34, 142);
+}
+
+#city {
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(34, 34, 142);
+}
+
+
+@media (max-width:900px) {
+    .currentWeather {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    #city {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 12px;
+
+    }
+
+}

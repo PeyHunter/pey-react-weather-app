@@ -1,0 +1,38 @@
+.container {
+    padding-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.Search {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.background {
+    padding: 30px;
+    margin: 0px auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    border: 1.5px solid rgb(102, 102, 102);
+    max-width: 1000px;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff, #c4edf9);}
+
+    .btn {
+        background-color: rgb(34, 34, 142);
+        font-size: 15px;
+    }
+
+    .source {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    @media (max-width:900px) {
+        .form-control {
+            font-size: 12px;}
+        }

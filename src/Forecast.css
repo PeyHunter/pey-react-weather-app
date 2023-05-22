@@ -1,0 +1,41 @@
+.daysInWeek {
+    text-align: center;
+}
+
+.nighttime {
+    color: grey;
+    text-align: center;
+}
+
+.weatherForcast {
+    text-align: center;
+    zoom: 0.9;
+}
+
+.forcastSeperator {
+    border-right: solid 1px;
+}
+
+.weekdays {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.days-in-week {
+    border-right: solid 1px;
+}
+
+
+.note {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+
+}
+
+.forecastEmojies {
+    display: block;
+    margin: auto;
+    font-size: 50px;}
