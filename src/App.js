@@ -1,20 +1,29 @@
 
 import './App.css';
+import "./styles.css"
 import axios from "axios"
+import Weather from "./Weather";
+import City from "./City";
+import Forcast from "./Forecast.js";
+import Footer from "./Footer.js";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-       
-        <h1>
-          Hello world
-        </h1>
-      
-      axios.get(url).then(displayTemp);
-      </header>
+export default function App() {
+  return <div>
+<br/><br/><br/>
+      <div className="container">
+      <div className="background">
+        <br/>
+        <Weather />
+        <City />
+        <br />
+        <Forcast />
+        <br />
+        <br />
+        <Footer />
+      </div>
     </div>
-  );
+    </div>
+  
 }
 
-export default App;
+
