@@ -6,10 +6,13 @@
 
 
 .currentWeather {
+display: flex;
+    align-items: center;
     font-size: 85px;
     font-weight: bold;
     color: rgb(34, 34, 142);
     line-height: 100px;
+
 }
 
 ul {
@@ -18,10 +21,6 @@ ul {
     ;
 }
 
-
-.emojies1 {
-    padding: 0px 80px 0px;
-}
 
 .littleTitle {
     font-size: 13px;

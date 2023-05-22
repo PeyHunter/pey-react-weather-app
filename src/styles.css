@@ -25,6 +25,13 @@ a {
     .btn {
         background-color: rgb(34, 34, 142);
         font-size: 15px;
+        border: none;
+    }
+    .btn:hover {
+        background-color: rgba(253, 246, 179, 0.752);
+        border: none;
+        color: rgb(34, 34, 142);
+
     }
 
     .source {

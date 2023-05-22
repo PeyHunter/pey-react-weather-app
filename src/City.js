@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./City.css";
 
 export default function City() {
@@ -14,7 +15,7 @@ export default function City() {
         <div className="col-sm-3 currentWeather">
           <span id="cityTemp">19</span>°
         </div>
-        <div className="col-sm-1 currentWeather">🌧️</div>
+        <div className="col-sm-1 d-flex currentWeather align-items-center justify-content-sm-start ">🌧️</div>
       </div>
 
       <ul>
