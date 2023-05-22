@@ -14,6 +14,7 @@ root.render(
   <StrictMode>
     <div className="container">
       <div className="background">
+        <br/>
         <Search />
         <City />
         <br />
