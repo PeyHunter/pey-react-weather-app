@@ -4,7 +4,7 @@ import "./Forecast.css";
 
 export default function Forecast() {
   return (
-    <div class="row">
+    <div className="row">
       <div className="col daysInWeek forcastSeperator">
         <p className="weekdays">mon</p>
         <p className="forecastEmojies">🌧️</p>

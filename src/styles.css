@@ -43,3 +43,6 @@ a {
         .form-control {
             font-size: 12px;}
         }
+        .btn {
+            display: flex;
+        }
