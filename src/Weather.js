@@ -71,7 +71,7 @@ export default function Weather(props) {
             Last updated:{" "}
             <span id="time">
               {" "}
-              <strong> < FormattedDate date={weatherData.date}/> </strong>
+              <strong> <FormattedDate date={weatherData.date} /> </strong>
             </span>
           </li>
           <li className="littleTitle">
