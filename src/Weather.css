@@ -6,7 +6,7 @@
 .currentWeather {
     display: flex;
     align-items: center;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
     color: rgb(34, 34, 142);
 }
@@ -24,25 +24,38 @@ ul {
 }
 
 #city {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: bold;
     color: rgb(34, 34, 142);
+    margin-bottom: -30px;
 }
+#cityTemp {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(34, 34, 142);
+    margin-bottom: -30px;
+}
+
 
 @media (max-width:900px) {
     .currentWeather {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 70px;
+        
     }
 
     .emoji-container {
-        font-size: 50px;
+        font-size: 40px;
         line-height: 70px;
     }
 
+   
+
+
     #city {
-        font-size: 30px;
+        font-size: 40px;
     }
+
     .btn {
         font-size: 12px;
     }
