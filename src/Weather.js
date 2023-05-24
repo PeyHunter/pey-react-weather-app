@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate.js";
 import ContentLoader from "react-content-loader";
 
 export default function Weather(props) {
@@ -16,6 +17,7 @@ export default function Weather(props) {
   }, [props.defaultCity]);
 
   function handleResponse(response) {
+    console.log(response.data)
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
@@ -24,7 +26,7 @@ export default function Weather(props) {
       description: response.data.condition.description,
       icon: "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png",
       city: response.data.city,
-      date: "Tuesday 14.00",
+      date: new Date (response.data.time * 1000)
     });
   }
 
@@ -56,7 +58,7 @@ export default function Weather(props) {
             <p id="city">{weatherData.city}</p>
           </div>
 
-          <div className="col-sm-3 currentWeather">
+          <div className="col-sm-2 currentWeather">
             <span id="cityTemp">{Math.round(weatherData.temperature)}</span>°
           </div>
           <div className="col-sm-1 currentWeather emoji-container">
@@ -65,11 +67,11 @@ export default function Weather(props) {
         </div>
 
         <ul>
-          <li className="littleTitle">
+          <li className="littleTitle col-sm-5">
             Last updated:{" "}
             <span id="time">
               {" "}
-              <strong> {weatherData.date} </strong>
+              <strong> < FormattedDate date={weatherData.date}/> </strong>
             </span>
           </li>
           <li className="littleTitle">
