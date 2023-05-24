@@ -7,6 +7,7 @@ import ContentLoader from "react-content-loader";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState("")
 
   useEffect(() => {
     let apiKey = "f9do3fd4558cd9a56ebf7d2bbtab042b";
@@ -30,10 +31,16 @@ export default function Weather(props) {
     });
   }
 
+  function updateCity(event) {
+    event.preventDefault();
+    setCity(event.target.value)
+
+  }
+
   if (weatherData.ready) {
     return (
       <div className="container">
-        <div className="Search">
+        <div className="Search" onChange={updateCity}>
           <form className="row g-2" id="search-form">
             <div className="col-sm-10">
               <input
@@ -55,7 +62,7 @@ export default function Weather(props) {
         <br />
         <div className="row">
           <div className="col-sm-7 currentWeather">
-            <p id="city">{weatherData.city}</p>
+            <p id="city">{props.defaultCity}</p>
           </div>
 
           <div className="col-sm-2 currentWeather">
