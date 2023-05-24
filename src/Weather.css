@@ -3,27 +3,22 @@
     color: rgb(34, 34, 142);
 }
 
-
 .currentWeather {
     display: flex;
     align-items: center;
-    font-size: 85px;
+    font-size: 70px;
     font-weight: bold;
     color: rgb(34, 34, 142);
-    line-height: 100px;
-
 }
 
 ul {
     list-style: none;
     padding-left: 0;
-    ;
 }
 
 
 .littleTitle {
     font-size: 13px;
-    font-weight: bolder;
     line-height: 1.5;
     color: rgb(34, 34, 142);
 }
@@ -33,7 +28,6 @@ ul {
     font-weight: bold;
     color: rgb(34, 34, 142);
 }
-
 
 @media (max-width:900px) {
     .currentWeather {
@@ -49,11 +43,7 @@ ul {
     #city {
         font-size: 30px;
     }
-
-
     .btn {
         font-size: 12px;
-
     }
-
 }

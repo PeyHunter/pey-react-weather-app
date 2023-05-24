@@ -1,7 +1,6 @@
 
 import './App.css';
 import "./styles.css"
-import axios from "axios"
 import Weather from "./Weather";
 
 import Forcast from "./Forecast.js";
@@ -13,7 +12,7 @@ export default function App() {
       <div className="container">
       <div className="background">
         <br/>
-        <Weather />
+        <Weather defaultCity="London" />
         <br />
         <Forcast />
         <br />
