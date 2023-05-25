@@ -1,18 +1,21 @@
 import React from "react";
 import FormattedDate from "./FormattedDate.js";
-import Icons from "./Icons.js";
+import UnitConversion from "./UnitConversion.js"
 
 
 export default function WeatherInfo(props) {
     return (<div className="WeatherInfo">
 
+        
+          <br/>
          <div className="row">
-          <div className="col-sm-7 currentWeather">
+          <div className="col-sm-6 currentWeather">
             <p id="city">{props.data.city}</p>
           </div>
 
-          <div className="col-sm-2 currentWeather">
-            <span id="cityTemp">{Math.round(props.data.temperature)}</span>°
+          <div className="col-sm-3 currentWeather">
+             < UnitConversion celsius={props.data.temperature} />
+           
           </div>
           <div className="col-sm-1 currentWeather emoji-container">
          <img src={props.data.icon} alt={props.data.description} />
@@ -20,6 +23,7 @@ export default function WeatherInfo(props) {
         </div>
 
         <ul>
+         
           <li className="littleTitle col-sm-5"> 
             Last updated:{" "}
             <span id="time">
