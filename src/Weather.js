@@ -12,16 +12,15 @@ export default function Weather(props) {
 
 
 
-
   function handleResponse(response) {
-  
+  console.log(response.data.condition.icon)
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
-      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon_url}`,
+      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
       city: response.data.city,
       date: new Date (response.data.time * 1000)
     });
@@ -66,8 +65,7 @@ export default function Weather(props) {
             </div>
           </form>
         </div>
-        <br />
-        <br />
+       
         <WeatherInfo data={weatherData}/>
       </div>
     );

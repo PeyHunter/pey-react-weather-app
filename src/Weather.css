@@ -11,6 +11,7 @@
     color: rgb(34, 34, 142);
 }
 
+.emoji-container {margin-top: 30px;}
 ul {
     list-style: none;
     padding-left: 0;
@@ -48,8 +49,6 @@ ul {
         font-size: 40px;
         line-height: 70px;
     }
-
-   
 
 
     #city {
