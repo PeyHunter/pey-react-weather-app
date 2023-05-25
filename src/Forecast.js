@@ -1,8 +1,20 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Forecast.css";
+import axios from "axios";
 
-export default function Forecast() {
+export default function Forecast(props) {
+
+
+ function displayForecast(response) {
+  console.log(response.data)
+ } 
+ let apiKey ="f9do3fd4558cd9a56ebf7d2bbtab042b"
+let url = `https://api.shecodes.io/weather/v1/forecast?query=${props.defaultCity}&key=${apiKey}`
+axios.get(url).then(displayForecast);
+
+
+
   return (
     <div className="row">
       <div className="col daysInWeek forcastSeperator">
