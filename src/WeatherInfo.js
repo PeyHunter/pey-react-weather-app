@@ -6,7 +6,7 @@ import UnitConversion from "./UnitConversion.js"
 export default function WeatherInfo(props) {
     return (<div className="WeatherInfo">
 
-        
+  
           <br/>
          <div className="row">
           <div className="col-sm-6 currentWeather">

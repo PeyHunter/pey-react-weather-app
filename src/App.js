@@ -14,7 +14,7 @@ export default function App() {
         <br/>
         <Weather defaultCity="London" />
         <br />
-        <Forcast />
+        <Forcast defaultCity="London"/>
         <br />
         <br />
         <Footer />

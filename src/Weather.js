@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import "./styles.css";
 import "./Weather.css";
+import Forecast from "./Forecast.js";
 
 import WeatherInfo from "./WeatherInfo.js";
 import ContentLoader from "react-content-loader";
@@ -13,11 +14,11 @@ export default function Weather(props) {
 
 
   function handleResponse(response) {
-  console.log(response.data.condition.icon)
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
+      coordinates: response.data.coordinates,
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
@@ -66,7 +67,8 @@ export default function Weather(props) {
           </form>
         </div>
        
-        <WeatherInfo data={weatherData}/>
+        <WeatherInfo data={weatherData} />
+         <Forecast />
       </div>
     );
   } else {
@@ -76,6 +78,7 @@ export default function Weather(props) {
         <ContentLoader viewBox="0 0 380 70" backgroundColor="#f3f3f3">
           <rect x="0" y="0" rx="0" ry="0" width="800" height="20" />
         </ContentLoader>
+       
       </div>
     );
   }
