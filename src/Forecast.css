@@ -9,7 +9,7 @@
 
 .weatherForcast {
     text-align: center;
-    zoom: 0.9;
+    
 }
 
 .forcastSeperator {
@@ -35,7 +35,9 @@
 
 }
 
-.forecastEmojies {
-    display: block;
-    margin: auto;
-    font-size: 50px;}
+.emoji-container {
+    display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin: auto;
+}

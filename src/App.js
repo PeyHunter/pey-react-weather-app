@@ -3,7 +3,6 @@ import './App.css';
 import "./styles.css"
 import Weather from "./Weather";
 
-import Forcast from "./Forecast.js";
 import Footer from "./Footer.js";
 
 export default function App() {
@@ -14,7 +13,7 @@ export default function App() {
         <br/>
         <Weather defaultCity="London" />
         <br />
-        <Forcast/>
+        
         <br />
         <br />
         <Footer />

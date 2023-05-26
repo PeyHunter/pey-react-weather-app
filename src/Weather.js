@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo.js";
+import Forecast from "./Forecast.js";
 import ContentLoader from "react-content-loader";
 
 export default function Weather(props) {
@@ -12,10 +13,12 @@ export default function Weather(props) {
 
 
   function handleResponse(response) {
+ 
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
+      coordinates: response.data.coordinates,
       coordinates: response.data.coordinates,
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
@@ -27,11 +30,10 @@ export default function Weather(props) {
 
  
 
-  function handleSubmit(event) {
-    event.preventDefault();
-   search(city)
-
-  }
+ function handleSubmit(event) {
+  event.preventDefault();
+  search(city);
+}
 
   function handleCityChange(event) {
     setCity(event.target.value)
@@ -64,8 +66,8 @@ export default function Weather(props) {
             </div>
           </form>
         </div>
-       
         <WeatherInfo data={weatherData} />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
@@ -75,6 +77,15 @@ export default function Weather(props) {
         <ContentLoader viewBox="0 0 380 70" backgroundColor="#f3f3f3">
           <rect x="0" y="0" rx="0" ry="0" width="800" height="20" />
         </ContentLoader>
+        <ContentLoader viewBox="0 0 380 70" backgroundColor="#f3f3f3">
+          <rect x="0" y="0" rx="0" ry="0" width="80" height="60" />
+        </ContentLoader>
+        <div>
+        <ContentLoader viewBox="0 0 380 70" backgroundColor="#f3f3f3">
+          <rect x="0" y="0" rx="0" ry="0" width="400" height="100" />
+        </ContentLoader>
+    
+      </div>
        
       </div>
     );
