@@ -10,6 +10,8 @@ export default function Forecast(props) {
 
 
  function displayForecast(response) {
+  setForecast(response.data)
+  console.log(response.data)
   setReady(true)
  } 
  
