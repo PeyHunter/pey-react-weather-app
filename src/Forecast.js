@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Forecast.css";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 
 export default function Forecast(props) {
@@ -19,16 +20,7 @@ let [forecast, setForecast] = useState(false)
     return (
      <div className="row">
       
-      <div className="col daysInWeek forcastSeperator">
-        <p className="weekdays">{forecast[0].time}</p>
-        <div className="col-sm-1 currentWeather emoji-container">
-            <img src={forecast[0].condition.icon_url} alt={forecast[0].condition.description} />
-          </div>
-        <p className="temp">
-          {Math.round(forecast[0].temperature.maximum)}° | <span className="nighttime "> {Math.round(forecast[0].temperature.minimum)}°</span>
-        </p>
-        <p className="note">{forecast[0].condition.description}</p>
-      </div>
+      < WeatherForecastDay data={forecast[0]} />
     </div>
   );
 
