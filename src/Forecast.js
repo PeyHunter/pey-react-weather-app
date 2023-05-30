@@ -9,6 +9,12 @@ export default function Forecast(props) {
 let [loaded, setLoaded] = useState(false)
 let [forecast, setForecast] = useState(false)
 
+
+
+useEffect (() =>{
+  setLoaded(false)
+}, [props.coordinates])
+
   function handleResponse(response) {
     setForecast(response.data.daily)
     setLoaded(true)
@@ -19,21 +25,18 @@ let [forecast, setForecast] = useState(false)
    
     return (
     <div className="row"> 
-    <div className="col forcastSeperator">
-         < WeatherForecastDay data={forecast[0]} />
-</div>
-<div className="col forcastSeperator" >
-      < WeatherForecastDay data={forecast[1]} />
-      </div>
-<div className="col forcastSeperator" >
-      < WeatherForecastDay data={forecast[2]} />
-      </div>
-<div className="col forcastSeperator" >
-      < WeatherForecastDay data={forecast[3]} />
-      </div>
-<div className="col " >
-      < WeatherForecastDay data={forecast[4]} />
-      </div>
+  
+      {forecast.map(function(dailyForecast, index){
+          if (index < 5) {
+        return ( 
+        <div className="col forcastSeperator" key={index}>
+         < WeatherForecastDay data={dailyForecast} />
+         </div>
+         )
+          }
+
+      })}
+       
 </div>
 
 
