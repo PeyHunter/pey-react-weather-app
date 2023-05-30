@@ -48,7 +48,8 @@ export default function WeatherInfo(props) {
             <strong>{props.data.description}</strong>
           </li>
         </ul>
+        <br />
 
-        <button className="btn btn-primary">Current Location</button>
+      
     </div>)
 }

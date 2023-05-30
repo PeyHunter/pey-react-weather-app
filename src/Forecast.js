@@ -16,12 +16,27 @@ let [forecast, setForecast] = useState(false)
 
 
   if (loaded) { 
-    console.log(forecast)
+   
     return (
-     <div className="row">
-      
-      < WeatherForecastDay data={forecast[0]} />
-    </div>
+    <div className="row"> 
+    <div className="col forcastSeperator">
+         < WeatherForecastDay data={forecast[0]} />
+</div>
+<div className="col forcastSeperator" >
+      < WeatherForecastDay data={forecast[1]} />
+      </div>
+<div className="col forcastSeperator" >
+      < WeatherForecastDay data={forecast[2]} />
+      </div>
+<div className="col forcastSeperator" >
+      < WeatherForecastDay data={forecast[3]} />
+      </div>
+<div className="col " >
+      < WeatherForecastDay data={forecast[4]} />
+      </div>
+</div>
+
+
   );
 
   } else {

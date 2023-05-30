@@ -19,13 +19,9 @@
 .weekdays {
     text-align: center;
     font-weight: bold;
+    margin-bottom: 0px;
 }
 
-
-
-.days-in-week {
-    border-right: solid 1px;
-}
 
 
 .note {

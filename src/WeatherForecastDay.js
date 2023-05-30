@@ -19,8 +19,8 @@ export default function WeatherForecastDay(props) {
     }
 
     return (
-        
-        <div className="col daysInWeek forcastSeperator">
+        <div className="row" >
+        <div className="col daysInWeek">
         <p className="weekdays">{day()}</p>
         <div className="col-sm-1 currentWeather emoji-container">
             <img src={props.data.condition.icon_url} alt={props.data.condition.description} />
@@ -29,6 +29,7 @@ export default function WeatherForecastDay(props) {
           {maxTemperature()}° | <span className="nighttime "> {minTemperature()}°</span>
         </p>
         <p className="note">{props.data.condition.description}</p>
+      </div>
       </div>
     )
 }
