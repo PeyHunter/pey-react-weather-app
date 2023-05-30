@@ -20,6 +20,15 @@ useEffect (() =>{
     setLoaded(true)
   }
 
+function load() {
+  let apiKey ="f9do3fd4558cd9a56ebf7d2bbtab042b"
+     let units = "metric";
+     let latitude = props.coordinates.latitude
+     let longitude = props.coordinates.longitude
+     let url = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}3&key=${apiKey}&units=${units}`
+      axios.get(url).then(handleResponse); 
+
+}
 
   if (loaded) { 
    
@@ -45,14 +54,8 @@ useEffect (() =>{
   );
 
   } else {
-
-      let apiKey ="f9do3fd4558cd9a56ebf7d2bbtab042b"
-     let units = "metric";
-     let latitude = props.coordinates.latitude
-     let longitude = props.coordinates.longitude
-     let url = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}3&key=${apiKey}&units=${units}`
-      axios.get(url).then(handleResponse); 
-
+load();
+      
 } 
 
 }
