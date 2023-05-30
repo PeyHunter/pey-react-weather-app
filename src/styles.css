@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
 .container {
     padding-top: 30px;
 }
@@ -9,12 +11,12 @@ a {
 
 
 .Search {
-    font-family: sans-serif;
     text-align: center;
 }
 
   .unit {
     font-size: 15px;
+  
     position: relative;
   line-height: 1;
   top: -22px;
@@ -43,6 +45,7 @@ a {
 
     .source {
         text-align: center;
+        font-family: 'Marcellus', serif;
         font-size: 12px;
     }
 

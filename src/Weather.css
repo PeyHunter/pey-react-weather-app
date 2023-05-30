@@ -1,7 +1,16 @@
+
+
+body {
+        background-origin: #000000;
+    
+}
+
 .h1 {
     font-size: 30px;
+
     color: rgb(34, 34, 142);
 }
+
 
 .currentWeather {
     display: flex;
@@ -11,7 +20,6 @@
     color: rgb(34, 34, 142);
  
 }
-
 
 ul {
     list-style: none;
